@@ -10,11 +10,11 @@ const SECRET = process.env.TOKEN_SECRET as Secret;
 
 describe('User Handler', () => {
   const userData: User = {
-    email: 'm@s.com',
-    user_name: 'ordertester',
-    first_name: 'Order',
-    last_name: 'Tester',
-    password: 'password123',
+      email: 'm@s.com',
+      user_name: 'mo_ramadan',
+      first_name: 'mo',
+      last_name: 'ramadan',
+      password: 'm10m20r30r40',
   };
 
   let token: string,

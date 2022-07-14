@@ -20,7 +20,7 @@ export const create = async (req: Request, res: Response) => {
     const price = req.body.price as unknown as number;
     if (name === undefined || price === undefined) {
       res.status(400);
-      res.send('Some required parameters are missing! eg. :name, :price');
+      res.send('required parameters are missing!');
       return false;
     }
 
@@ -39,7 +39,7 @@ export const read = async (req: Request, res: Response) => {
 
     if (id === undefined) {
       res.status(400);
-      res.send('Missing required parameter :id.');
+      res.send('Missing required parameter');
       return false;
     }
 
@@ -60,7 +60,7 @@ export const update = async (req: Request, res: Response) => {
 
     if (name === undefined || price === undefined || id === undefined) {
       res.status(400);
-      res.send('Some required parameters are missing! eg. :name, :price, :id');
+      res.send('required parameters are missing!');
       return false;
     }
 
@@ -79,7 +79,7 @@ export const deleteProduct = async (req: Request, res: Response) => {
 
     if (id === undefined) {
       res.status(400);
-      res.send('Missing required parameter :id.');
+      res.send('Missing required parameter');
       return false;
     }
 

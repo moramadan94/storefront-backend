@@ -23,7 +23,7 @@ export const create = async (req: Request, res: Response) => {
 
     if (products === undefined || status === undefined || user_id === undefined) {
       res.status(400);
-      res.send('Some required parameters are missing! eg. :products, :status, :user_id');
+      res.send('required parameters are missing!');
       return false;
     }
 
@@ -41,7 +41,7 @@ export const read = async (req: Request, res: Response) => {
 
     if (id === undefined) {
       res.status(400);
-      res.send('Missing required parameter :id.');
+      res.send('Missing required parameter');
       return false;
     }
 
@@ -63,7 +63,7 @@ export const update = async (req: Request, res: Response) => {
 
     if (products === undefined || status === undefined || user_id === undefined || id === undefined) {
       res.status(400);
-      res.send('Some required parameters are missing! eg. :products, :status, :user_id, :id');
+      res.send('required parameters are missing!');
       return false;
     }
 
@@ -82,7 +82,7 @@ export const deleteOrder = async (req: Request, res: Response) => {
 
     if (id === undefined) {
       res.status(400);
-      res.send('Missing required parameter :id.');
+      res.send('Missing required parameter');
       return false;
     }
 

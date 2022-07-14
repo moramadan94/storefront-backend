@@ -4,8 +4,8 @@ const ProductStoreInstance = new ProductStore();
 
 describe('Product Model', () => {
   const product: BaseProduct = {
-    name: 'CodeMaster 3000',
-    price: 2000,
+    name: 'product 100',
+    price: 100,
   };
 
   async function createProduct(product: BaseProduct) {

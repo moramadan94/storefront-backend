@@ -1,8 +1,8 @@
 interface Error {
-  status?: number
-  name?: string
-  message?: string
-  stack?: string
+  status?: number;
+  name?: string;
+  message?: string;
+  stack?: string;
 }
 
-export default Error
+export default Error;

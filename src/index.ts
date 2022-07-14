@@ -4,15 +4,14 @@ import helmet from 'helmet';
 import errorMiddleware from './middleware/error.middleware';
 import config from './config';
 import routes from './routes';
+import cors from 'cors';
+import { loggerMiddleware } from './middleware/logger';
+import { requestNotFound404 } from './middleware//404Request';
+import { handleErrors } from './middleware/handleErrors';
 
 const PORT = config.port || 3000;
-// create an instance server
 const app: Application = express();
-// Middleware to parses incoming requests with JSON payloads and is based on body-parser.
 app.use(express.json());
-// HTTP request logger middleware
-app.use(morgan('common'));
-// HTTP security middleware headers
 app.use(helmet());
 app.use('/api', routes);
 
@@ -22,16 +21,22 @@ app.get('/', (req: Request, res: Response) => {
   });
 });
 
-// error handler middleware
 app.use(errorMiddleware);
 
-app.use((_: Request, res: Response) => {
-  res.status(404).json({
-    message: 'you are lost',
-  });
-});
+// enable cors
+const corsOption = {
+  optionsSuccessStatus: 200, // for some lagacy browsers
+};
+app.use(cors(corsOption));
+// add json parser
+app.use(express.json());
+// console log all requests
+app.use(loggerMiddleware);
+// handle unknown requests
+app.use(requestNotFound404);
+// handle errors
+app.use(handleErrors);
 
-// start express server
 app.listen(PORT, () => {
   console.log(`Server is starting at prot:${PORT}`);
 });

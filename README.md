@@ -2,7 +2,7 @@
 
 ## Prepare env
 
-- add a `.env` file in the root directory and set the missing `###` environment parameters
+- add a `.env` file in the root directory
 
 ```
 PORT=3000
@@ -21,17 +21,17 @@ TOKEN_SECRET=###
 
 ## Set up
 
-- `npm install` to install all dependencies
-- `npm run db-up` to set up the database
-- `npm run build` to build the app
+- `yarn install` to install all dependencies
+- `yarn db-up` to set up the database
+- `yarn build` to build the app
 
 ## Start the app
 
-- `npm run start` to start the app
+- `yarn start` to start the app
 
 ## Test the app
 
-- add a `database.json` file in the root directory and set the missing `###` parameters
+- add a `database.json` file in the root directory
 
 ```
 {
@@ -55,4 +55,8 @@ TOKEN_SECRET=###
 }
 ```
 
-- `npm run test` to run all tests
+- `yarn test` to run all tests
+
+## Author
+
+Mohamed Ramadan (https://github.com/moramadan94)

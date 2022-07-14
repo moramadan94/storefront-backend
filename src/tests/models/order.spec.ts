@@ -25,18 +25,18 @@ describe('Order Model', () => {
 
   beforeAll(async () => {
     const user: User = await UserStoreInstance.create({
-      email: 'm@s.com',
-      user_name: 'ordertester',
-      first_name: 'Order',
-      last_name: 'Tester',
-      password: 'password123',
+        email: 'm@s.com',
+      user_name: 'mo_ramadan',
+      first_name: 'mo',
+      last_name: 'ramadan',
+      password: 'm10m20r30r40',
     });
 
     user_id = user.id;
 
     const product: Product = await ProductStoreInstance.create({
-      name: 'OrderSpec Product',
-      price: 99,
+      name: 'Product',
+      price: 100,
     });
 
     product_id = product.id;

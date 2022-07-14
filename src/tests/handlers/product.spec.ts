@@ -11,19 +11,20 @@ const SECRET = process.env.TOKEN_SECRET as Secret;
 
 describe('Product Handler', () => {
   const product: BaseProduct = {
-    name: 'CodeMaster 3000',
-    price: 999,
+     name: 'product 100',
+      price: 100,
   };
+
 
   let token: string, userId: number, productId: number;
 
   beforeAll(async () => {
     const userData: User = {
-      email: 'm@s.com',
-      user_name: 'ordertester',
-      first_name: 'Order',
-      last_name: 'Tester',
-      password: 'password123',
+       email: 'm@s.com',
+      user_name: 'mo_ramadan',
+      first_name: 'mo',
+      last_name: 'ramadan',
+      password: 'm10m20r30r40',
     };
 
     const { body } = await request.post('/users').send(userData);

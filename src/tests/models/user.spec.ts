@@ -5,11 +5,11 @@ const UserStoreInstance = new UserStore();
 
 describe('User Model', () => {
   const user: User = {
-    email: 'm@s.com',
-    user_name: 'ordertester',
-    first_name: 'Order',
-    last_name: 'Tester',
-    password: 'password123',
+      email: 'm@s.com',
+      user_name: 'mo_ramadan',
+      first_name: 'mo',
+      last_name: 'ramadan',
+      password: 'm10m20r30r40',
   };
 
   async function createUser(user: User) {
